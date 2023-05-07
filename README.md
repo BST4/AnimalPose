@@ -24,11 +24,6 @@ ViTPose is a state-of-the-art algorithm for animal pose estimation, based on the
 ### Dataset
 AP10K is a large-scale benchmark for general animal pose estimation, designed to facilitate research in this field. The dataset consists of 10,015 images collected and filtered from 23 animal families and 54 species, with high-quality key point annotations. Additionally, it contains another 50k images with family and species labels. The dataset can be used for supervised learning, cross-domain transfer learning, and intra- and inter-family domain generalization for unseen animals.
 
-Source: Conversation with Bing, 07/05/2023(1) AP-10K: A Benchmark for Animal Pose Estimation in the Wild. https://arxiv.org/abs/2108.12617 Accessed 07/05/2023.
-(2) AP-10K/README.md at main · AlexTheBad/AP-10K · GitHub. https://github.com/AlexTheBad/AP-10K/blob/main/README.md Accessed 07/05/2023.
-(3) AP-10K Dataset | Papers With Code. https://paperswithcode.com/dataset/ap-10k Accessed 07/05/2023.
-(4) AP-10K: A Benchmark for Animal Pose Estimation in the Wild. https://openreview.net/forum?id=rH8yliN6C83 Accessed 07/05/2023.
-
 ## Installation
 
 We use PyTorch 1.9.0 or NGC docker 21.06, and mmcv 1.3.9 for the experiments.
