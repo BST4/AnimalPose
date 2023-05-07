@@ -3,9 +3,11 @@
     - [Base Model](#base-model)
     - [Dataset](#dataset)
   - [Installation](#installation)
-  - [Usage](#usage)
   - [Train](#train)
   - [Evaluation](#evaluation)
+  - [Todo](#todo)
+  - [Acknowledge](#acknowledge)
+  - [Citing ViTPose](#citing-vitpose)
 
 # MLDA-BST4: Animal Pose Estimation
 
@@ -22,7 +24,7 @@ ViTPose is a state-of-the-art algorithm for animal pose estimation, based on the
 ### Dataset
 The APT-36K dataset is a large-scale dataset of animal images with annotated keypoints that is ideal for training and evaluating animal pose estimation algorithms like ViTPose. With over 36,000 images of 36 different animal species, including dogs, cats, horses, cows, and birds, the dataset provides a diverse range of animal species and imaging conditions for training and fine-tuning pose estimation models. Each image is annotated with 15 keypoints corresponding to different body parts of the animals, and the dataset also includes annotations for occlusions, which is a common challenge in animal pose estimation. By using the APT-36K dataset, we were able to train and evaluate our ViTPose-based algorithm for animal pose estimation, and develop an API for a downstream classification task.
 
-## Usage
+## Installation
 
 We use PyTorch 1.9.0 or NGC docker 21.06, and mmcv 1.3.9 for the experiments.
 ```bash
@@ -41,6 +43,8 @@ After install the two repos, install timm and einops, i.e.,
 pip install timm==0.4.9 einops
 ```
 
+## Train
+
 After downloading the ViTPose+ pretrained models, please first re-organize the pre-trained weights using
 
 ```bash
@@ -56,6 +60,8 @@ bash tools/dist_train.sh <Config PATH> <NUM GPUs> --cfg-options model.pretrained
 # for multiple machines
 python -m torch.distributed.launch --nnodes <Num Machines> --node_rank <Rank of Machine> --nproc_per_node <GPUs Per Machine> --master_addr <Master Addr> --master_port <Master Port> tools/train.py <Config PATH> --cfg-options model.pretrained=<Pretrained PATH> --launcher pytorch --seed 0
 ```
+
+## Evaluation
 
 To test the pretrained models performance, please run 
 
