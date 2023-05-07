@@ -14,7 +14,7 @@
 ## Introduction
 In this project, our goal is to develop an API for a downstream animal classification task based on ViTPose, a state-of-the-art animal pose estimation algorithm. The API will provide users with a convenient and efficient way to extract pose features from animal images or videos, which can then be used for various downstream tasks, such as animal identification, behavior analysis, and disease diagnosis.
 
-To achieve this goal, we will adapt ViTPose to output pose features that are compatible with the downstream classification task. We will also optimize the API for speed and scalability, so that it can handle large-scale datasets and real-time applications. Additionally, we will provide a user-friendly interface and comprehensive documentation to facilitate the adoption of our API by researchers and practitioners in the animal science community.
+To achieve this goal, we will adapt ViTPose to output pose features that are compatible with the downstream classification task. We will also optimize the API for speed and scalability so that it can handle large-scale datasets and real-time applications. Additionally, we will provide a user-friendly interface and comprehensive documentation to facilitate the adoption of our API by researchers and practitioners in the animal science community.
 
 Overall, our project aims to bridge the gap between animal pose estimation and downstream tasks by providing a robust and accessible tool for animal classification and analysis.
 
@@ -22,7 +22,12 @@ Overall, our project aims to bridge the gap between animal pose estimation and d
 ViTPose is a state-of-the-art algorithm for animal pose estimation, based on the Vision Transformer (ViT) architecture. ViTPose is designed to automatically detect and track the body parts of animals in images or videos, which is a challenging task due to the high variability in animal poses, appearances, and environmental conditions.
 
 ### Dataset
-The APT-36K dataset is a large-scale dataset of animal images with annotated keypoints that is ideal for training and evaluating animal pose estimation algorithms like ViTPose. With over 36,000 images of 36 different animal species, including dogs, cats, horses, cows, and birds, the dataset provides a diverse range of animal species and imaging conditions for training and fine-tuning pose estimation models. Each image is annotated with 15 keypoints corresponding to different body parts of the animals, and the dataset also includes annotations for occlusions, which is a common challenge in animal pose estimation. By using the APT-36K dataset, we were able to train and evaluate our ViTPose-based algorithm for animal pose estimation, and develop an API for a downstream classification task.
+AP10K is a large-scale benchmark for general animal pose estimation, designed to facilitate research in this field. The dataset consists of 10,015 images collected and filtered from 23 animal families and 54 species, with high-quality key point annotations. Additionally, it contains another 50k images with family and species labels. The dataset can be used for supervised learning, cross-domain transfer learning, and intra- and inter-family domain generalization for unseen animals.
+
+Source: Conversation with Bing, 07/05/2023(1) AP-10K: A Benchmark for Animal Pose Estimation in the Wild. https://arxiv.org/abs/2108.12617 Accessed 07/05/2023.
+(2) AP-10K/README.md at main · AlexTheBad/AP-10K · GitHub. https://github.com/AlexTheBad/AP-10K/blob/main/README.md Accessed 07/05/2023.
+(3) AP-10K Dataset | Papers With Code. https://paperswithcode.com/dataset/ap-10k Accessed 07/05/2023.
+(4) AP-10K: A Benchmark for Animal Pose Estimation in the Wild. https://openreview.net/forum?id=rH8yliN6C83 Accessed 07/05/2023.
 
 ## Installation
 
